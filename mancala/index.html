@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE declara a versão do HTML usado no documento -->
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta charset=UTF-8> <!-- para caracteres acentuados   -->
+    <title>Mancala</title> <!-- texto na decoração da janela -->
+</head>
+
+<body>
+
+    <h1 class="title">Mancala</h1>
+
+    <div id="nav">
+        <div id="logdiv">
+            <label for="userName">User Name:</label><br>
+            <input type="text" id="userName" name="userName"><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+
+            <button onclick="login(event)" name="login">Login</button><br>
+        </div>
+        <form class="form" id="form">
+
+            <label for="board_size">Board Size:</label>
+            <select id="board_size" name="board_size">
+                <option >10</option>
+                <option >12</option>
+            </select><br>
+            
+            <label for="seed_num">Number of Seeds:</label>
+            <select id="seed_num" name="seed_num">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </select><br>
+            
+            <label for="game_mode">Game Mode:</label>
+            <select name="game_mode">
+                <option>Player vs Player</option>
+                <option>Player vs Computer</option>
+                <option>Computer vs Computer</option>
+            </select><br>
+            
+            <label for="first_turn">First Turn:</label>
+            <select name="first_turn">
+                <option>Player</option>
+                <option>Computer</option>
+            </select><br>
+            
+            <label for="ai_level">AI Level:</label>
+            <select name="ai_level">
+                <option>1</option>
+                <option>2</option>
+            </select><br>
+
+        </form>
+    </div>
+
+    <button onclick="startGame(event)" name="play">Play</button><br>
+
+    <button id="instructions">Instructions</button><br>
+    <div id="insModal" class="modal_ins">
+        <div class="modal-content">
+          <span class="close_ins">&times;</span>
+          <p>Instructions</p>
+        </div>  
+    </div>
+
+    <button id="classification">Classification</button><br>
+    <div id="classModal" class="modal_class">
+        <div class="modal-content">
+          <span class="close_class">&times;</span>
+          <p>Classification</p>
+        </div>  
+    </div>
+
+    <div id="base"></div>
+
+    <!--
+    <div class="board">
+        <div class="section endsection">
+            <div class="pot" id="mb"></div> 
+        </div>
+        <div id="midsection" class="section midsection">
+          <div class="midrow topmid">
+            <div class="pot" id="pt1"></div>
+            <div class="pot" id="pt2"></div>
+            <div class="pot" id="pt3"></div>
+            <div class="pot" id="pt4"></div>
+            <div class="pot" id="pt5"></div>
+            <div class="pot" id="pt6"></div>
+          </div>
+          <div class="midrow botmid">
+            <div class="pot" id="pb6"></div>
+            <div class="pot" id="pb5"></div>
+            <div class="pot" id="pb4"></div>
+            <div class="pot" id="pb3"></div>
+            <div class="pot" id="pb2"></div>
+            <div class="pot" id="pb1"></div>
+          </div>
+        </div>
+        <div class="section endsection">
+            <div class="pot" id="mt"></div>        
+        </div>
+      </div>
+      -->
+      
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="login.js"></script>
+
+</body>
